@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-color: rgb(0, 0, 0);
+  width: 300px;
+  border: 15px solid rgb(248, 248, 248);
+  padding: 50px;
+  margin: 20px;
+}
+</style>
+</head>
+<body>
+
+
+
+<b>Code for The maximum number of consecutive equal elements</b>
+
+<div style="color:rgb(255, 255, 255);">a=int(input())<br>
+    b=a<br>
+    i=1<br>
+    p=1<br>
+    list1=[]<br>
+    list2=[]<br>
+    list1.append(a)<br>
+    while a!=0:<br>
+     &ensp;   a=int(input())<br>
+     &ensp;list1.append(a)<br>
+     &ensp; i=i+1<br>
+    for j in range(i-1):<br>
+    &ensp;if list1[j]==list1[j+1]:<br>
+    &ensp;&ensp;  p=p+1<br>
+    &ensp;else:<br>
+    &ensp;&ensp;   list2.append(p)<br>
+    &ensp;&ensp;p=1<br>
+            
+      
+    list2.sort()<br>
+    print(list2[-1])<br>
+    </div>
+
+
+</body>
+</html>
+
