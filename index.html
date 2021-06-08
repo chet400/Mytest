@@ -1,29 +1,100 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <title>Title of the document</title>
-      <link rel="stylesheet" href="background.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
-   </head>
-   <body>
-      <div class ="wrapper">
-      <form>
-         <input type="button" onclick="window.location.href = 'https://www.w3docs.com';" value="w3docs"/>
-      </form>
-	  <a href="next.html">
-		<button>Next page</button>
-	  </a>
-     <div class ="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-   </body>
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+
+<p>Select the exercise</p>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">EXERCISE</button>
+  <div id="myDropdown" class="dropdown-content">
+    
+    <a href="1.input.html">
+        <button class="block">1.Input, print and numbers</button>     
+    </a>
+    <a href="2.integer.html">
+      <button class="block">2.Integer and float numbers</button> 
+    </a>
+    <a href="3.condition.html">
+      <button class="block">3.Conditions: if, then, else</button> 
+    </a>
+    <a href="4.for.html">
+      <button class="block">4.For loop with range </button> 
+    </a>
+    <a href="5.string.html">
+      <button class="block">5.Strings </button> 
+    </a>
+    <a href="6.while.html">
+      <button class="block">6.While loop</button> 
+    </a>
+
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
 </html>
